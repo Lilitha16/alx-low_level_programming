@@ -6,13 +6,15 @@
 int main(void)
 {
 int i;
-for (i = 0; i < 10; i++)
+for (i = 0; i < 10 || i < 'g'; i++)
 {
-putchar("%d", i);
-if (i < 9)
-{
+if (i < 10)
+putchar(i + '0');
+else
+putchar(i);
+if (i < 'f')
 putchar(", ");
-}
+putchar(' ');
 }
 putchar("$\n");
 return (0);
