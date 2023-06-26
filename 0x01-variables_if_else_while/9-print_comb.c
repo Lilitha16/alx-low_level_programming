@@ -1,24 +1,22 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
- * char *_strcpy - a function that copies the string pointed to by src
- * @dest: copy to
- * @src: copy from
- * Return: string
+ * main - prints all possible combinations of single-digit numbers
+ * Return: Always 0 (Success)
  */
-char *_strcpy(char *dest, char *src)
+int main(void)
 {
-	int l = 0;
-	int x = 0;
+	int n;
 
-	while (*(src + l) != '\0')
+	for (n = 48; n < 58; n++)
 	{
-		l++;
+		putchar(n);
+		if (n != 57)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
-	for ( ; x < l ; x++)
-	{
-		dest[x] = src[x];
-	}
-	dest[l] = '\0';
-	return (dest);
+	putchar('\n');
+	return (0);
 }
