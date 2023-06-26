@@ -1,21 +1,24 @@
-#include <stdio.h>
+#include "main.h"
+
 /**
- * main - Entry point of the program
- * Return: Always 0 (Success)
+ * char *_strcpy - a function that copies the string pointed to by src
+ * @dest: copy to
+ * @src: copy from
+ * Return: string
  */
-int main(void)
+char *_strcpy(char *dest, char *src)
 {
-int i;
-for (i = 0; i < 10 || i < 'g'; i++)
-{
-if (i < 10)
-putchar(i + '0');
-else
-putchar(i);
-if (i < 'f')
-putchar(", ");
-putchar(' ');
-}
-putchar("$\n");
-return (0);
+	int l = 0;
+	int x = 0;
+
+	while (*(src + l) != '\0')
+	{
+		l++;
+	}
+	for ( ; x < l ; x++)
+	{
+		dest[x] = src[x];
+	}
+	dest[l] = '\0';
+	return (dest);
 }
