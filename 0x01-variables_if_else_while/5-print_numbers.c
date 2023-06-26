@@ -5,12 +5,11 @@
  */
 int main(void)
 {
-char c = 'a';
-while (c <= 'z')
+int i = 0;
+while (i < 10)
 {
-if (c != 'q' && c != 'e')
-putchar(c);
-c++;
+putchar(i + '0');
+i++;
 }
 putchar('\n');
 return (0);
