@@ -1,2 +1,0 @@
-e
-Hello, World
